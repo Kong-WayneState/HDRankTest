@@ -1,0 +1,22 @@
+Package: HDRankTest
+Type: Package
+Title: High-Dimensional Two-Sample Rank-Based Inference
+Version: 0.1.0
+Author: Xiaoli Kong
+Maintainer: Xiaoli Kong <kong@wayne.edu>
+Description: High-Dimensional Two-Sample Rank-Based Inference based on relative effects.
+Depends: R (>= 4.4.0)
+Imports: stats, mvtnorm, pathviewr
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+NeedsCompilation: no
+VignetteBuilder: knitr
+Packaged: 2026-06-29 10:00:00 ETC;
+Date/Publication:
+License: MIT + file LICENSE
+Config/testthat/edition: 3

@@ -1,0 +1,80 @@
+---
+title: "introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This package includes the following rank-based testing procedures 
+
+- Kong, Ye and Weng (2026)
+- Kong, Villasante Tezanos, Harrar (2022, Symmetry)
+- Kong and Harrar (2020, JNA)
+ovlRankTest(X1, X2)
+
+and the following mean-based testing procedures 
+
+- Chen and Qin (2020 AOS)
+- Gregory, Carroll, Baladandayuthapani and Lahiri (2015, JASA) 
+- Zhang and Wang (2020, CSDA)
+- XU, Lin, Wei and Pan (2016, Biometrika)
+
+```{r setup}
+library(HDRankTest)
+## basic example code
+
+set.seed(123)
+p = 300
+n1 = 60
+n2 = 80
+mu1 = mu2 = rep(0, p)
+arma1 = arma2 = list(ar = c(.4, -.1), ma = c(0.2, 0.3)) # L=3
+
+X1 <- rData(p=p, n1, mu1, arma=arma1) 
+X2 <- rData(p=p, n1, mu1, arma=arma1) 
+
+####################
+# Rank-Based Tests #
+####################
+# Kong, Ye and Weng (2026)
+adpRankTest(X1, X2, W = "CV")
+
+# Kong, Villasante Tezanos, Harrar (2022, Symmetry)
+cmpRankTest(X1, X2, W = 0) # mpt
+
+
+cmpRankTest(X1, X2, W = 0, method = "gct") # gct
+
+# Kong and Harrar (2020, JNA)
+ovlRankTest(X1, X2)
+
+
+####################
+# Mean-Based Tests #
+####################
+# Chen and Qin (2020 AOS)
+ovlTest(X1, X2)
+
+
+# Gregory, Carroll, Baladandayuthapani and Lahiri (2015, JASA) 
+cmpTest(X1, X2, W = 0, method = "gct")
+
+# Zhang and Wang (2020, CSDA)
+cmpTest(X1, X2, method = "mpt")
+
+
+# XU, Lin, Wei and Pan (2016, Biometrika)
+adpTest(X1, X2, W = 0)
+
+
+
+```
