@@ -26,8 +26,10 @@ Available options are \code{"mpt"} and \code{"gct"}.}
 values of test statistic, p-value and window width.
 }
 \description{
-Gregory, Carroll, Baladandayuthapani and Lahiri (2015, JASA) and
-Zhang and Wang (2020, CSDA)
+Gregory, Carroll, Baladandayuthapani and Lahiri (2015, JASA):
+A two-sample test for equality of means in high dimension;
+and Zhang and Wang (2021, CSDA): A more powerful test of equality of
+high-dimensional two-sample means.
 }
 \examples{
 # generating 2-sample data

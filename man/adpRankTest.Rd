@@ -27,8 +27,8 @@ and \code{norm.type = "E"}}
 values of test statistic, p-value and window width.
 }
 \description{
-Adaptive Rank-Based Inference for High-Dimensional Two-Sample Problems
-by Kong, Ye, and Weng (2026).
+Kong, Ye, and Weng (2026): Adaptive rank-based inference for
+high-dimensional two-sample problems.
 }
 \examples{
 # generating 2-sample data

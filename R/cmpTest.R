@@ -2,8 +2,11 @@
 
 #' @name cmpTest
 #' @title Composite Test
-#' @description Gregory, Carroll, Baladandayuthapani and Lahiri (2015, JASA) and
-#'              Zhang and Wang (2020, CSDA)
+#' @description Gregory, Carroll, Baladandayuthapani and Lahiri (2015, JASA):
+#' A two-sample test for equality of means in high dimension;
+#' and Zhang and Wang (2021, CSDA): A more powerful test of equality of
+#' high-dimensional two-sample means.
+#'
 #' @param X1 A numeric \eqn{(n_1 \times p)} matrix of data from sample 1.
 #' @param X2 A numeric \eqn{(n_2 \times p)} matrix of data from sample 2.
 #' @param W The lag window width. If \code{NA}, defaults to \code{ceiling(p^(3/8))}
@@ -18,7 +21,7 @@
 #'
 #' @export
 #'
-#' @importFrom stats var cov pnorm
+#' @importFrom stats var cov pnorm acf
 #'
 #' @examples
 #' # generating 2-sample data

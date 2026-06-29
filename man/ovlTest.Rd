@@ -15,7 +15,8 @@ ovlTest(X1, X2)
 values of test statistic and p-value.
 }
 \description{
-Chen and Qin (2010, AOS)
+Chen and Qin (2010, AOS): A two-sample test for high-dimensional data
+with applications to gene-set testing.
 }
 \examples{
 # generating 2-sample data

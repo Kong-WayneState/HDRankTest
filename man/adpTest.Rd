@@ -25,7 +25,8 @@ and \code{norm.type = "E"}}
 values of test statistic, p-value and window width.
 }
 \description{
-XU, Lin, Wei and Pan (2016, Biometrika)
+XU, Lin, Wei and Pan (2016, Biometrika): An adaptive two-sample
+test for high-dimensional means.
 }
 \examples{
 # generating 2-sample data

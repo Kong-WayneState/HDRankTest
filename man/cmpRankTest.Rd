@@ -43,8 +43,8 @@ and \code{norm.type = "E"}}
 values of test statistic, p-value and window width.
 }
 \description{
-Generalized Nonparametric Composite Tests for High-Dimensional
-Data by Kong, Villasante Tezanos, Harrar (2022)
+Kong, Villasante Tezanos and Harrar (2022): Generalized nonparametric
+composite tests for high-dimensional data.
 }
 \examples{
 # generating 2-sample data

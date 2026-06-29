@@ -1,7 +1,7 @@
 #' @name adpRankTest
 #' @title Adaptive Rank-Based Test
-#' @description Adaptive Rank-Based Inference for High-Dimensional Two-Sample Problems
-#'              by Kong, Ye, and Weng (2026).
+#' @description Kong, Ye, and Weng (2026): Adaptive rank-based inference for
+#' high-dimensional two-sample problems.
 #'
 #' @param X1 A numeric \eqn{(n_1 \times p)} matrix of data from sample 1.
 #' @param X2 A numeric \eqn{(n_2 \times p)} matrix of data from sample 2.
@@ -17,7 +17,8 @@
 #'
 #' @export
 #'
-#' @importFrom stats var pnorm cov2cor
+#' @importFrom stats var pnorm cov2cor acf
+#' @importFrom pathviewr find_curve_elbow
 #'
 #' @examples
 #' # generating 2-sample data

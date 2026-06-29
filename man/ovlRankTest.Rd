@@ -15,8 +15,8 @@ ovlRankTest(X1, X2)
 values of test statistic and p-value.
 }
 \description{
-High dimensional Rank-based inference
-by Kong and Harrar (2020)
+Kong and Harrar (2020, JNA): High dimensional Rank-based
+inference.
 }
 \examples{
 # generating 2-sample data

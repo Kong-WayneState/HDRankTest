@@ -1,5 +1,5 @@
 ---
-title: "introduction"
+title: "Introduction"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{introduction}
@@ -20,12 +20,11 @@ This package includes the following rank-based testing procedures
 - Kong, Villasante Tezanos, Harrar (2022, Symmetry)
 - Kong and Harrar (2020, JNA)
 
-
 and the following mean-based testing procedures 
 
-- Chen and Qin (2020 AOS)
+- Chen and Qin (2010 AOS)
 - Gregory, Carroll, Baladandayuthapani and Lahiri (2015, JASA) 
-- Zhang and Wang (2020, CSDA)
+- Zhang and Wang (2021, CSDA)
 - XU, Lin, Wei and Pan (2016, Biometrika)
 
 ```{r setup}
@@ -61,14 +60,14 @@ ovlRankTest(X1, X2)
 ####################
 # Mean-Based Tests #
 ####################
-# Chen and Qin (2020 AOS)
+# Chen and Qin (2010 AOS)
 ovlTest(X1, X2)
 
 
 # Gregory, Carroll, Baladandayuthapani and Lahiri (2015, JASA) 
 cmpTest(X1, X2, W = 0, method = "gct")
 
-# Zhang and Wang (2020, CSDA)
+# Zhang and Wang (2021, CSDA)
 cmpTest(X1, X2, method = "mpt")
 
 

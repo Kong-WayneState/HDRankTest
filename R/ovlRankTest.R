@@ -1,7 +1,7 @@
 #' @name ovlRankTest
 #' @title Overall Rank-Based Test
-#' @description High dimensional Rank-based inference
-#'              by Kong and Harrar (2020)
+#' @description Kong and Harrar (2020, JNA): High dimensional Rank-based
+#' inference.
 #'
 #' @param X1 A numeric \eqn{(n_1 \times p)} matrix of data from sample 1.
 #' @param X2 A numeric \eqn{(n_2 \times p)} matrix of data from sample 2.

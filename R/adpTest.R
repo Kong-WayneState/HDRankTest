@@ -2,7 +2,8 @@
 
 #' @name adpTest
 #' @title Adaptive Test
-#' @description XU, Lin, Wei and Pan (2016, Biometrika)
+#' @description XU, Lin, Wei and Pan (2016, Biometrika): An adaptive two-sample
+#' test for high-dimensional means.
 #'
 #' @param X1 A numeric \eqn{(n_1 \times p)} matrix of data from sample 1.
 #' @param X2 A numeric \eqn{(n_2 \times p)} matrix of data from sample 2.
@@ -18,7 +19,8 @@
 #'
 #' @export
 #'
-#' @importFrom stats var pnorm cov2cor
+#' @importFrom stats var pnorm cov2cor acf
+#' @importFrom pathviewr find_curve_elbow
 #'
 #' @examples
 #' # generating 2-sample data

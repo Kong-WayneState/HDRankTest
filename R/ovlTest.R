@@ -2,7 +2,9 @@
 
 #' @name ovlTest
 #' @title Overall Mean Test
-#' @description Chen and Qin (2010, AOS)
+#' @description Chen and Qin (2010, AOS): A two-sample test for high-dimensional data
+#' with applications to gene-set testing.
+#'
 #' @param X1 A numeric \eqn{(n_1 \times p)} matrix of data from sample 1.
 #' @param X2 A numeric \eqn{(n_2 \times p)} matrix of data from sample 2.
 #'

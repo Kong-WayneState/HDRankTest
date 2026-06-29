@@ -1,7 +1,7 @@
 #' @name cmpRankTest
 #' @title Composite Rank-Based Test
-#' @description Generalized Nonparametric Composite Tests for High-Dimensional
-#'              Data by Kong, Villasante Tezanos, Harrar (2022)
+#' @description Kong, Villasante Tezanos and Harrar (2022): Generalized nonparametric
+#' composite tests for high-dimensional data.
 #'
 #' @param X1 A numeric \eqn{(n_1 \times p)} matrix of data from sample 1.
 #' @param X2 A numeric \eqn{(n_2 \times p)} matrix of data from sample 2.
@@ -23,7 +23,8 @@
 #'
 #' @export
 #'
-#' @importFrom stats var cov pnorm
+#' @importFrom stats var cov pnorm acf
+#' @importFrom pathviewr find_curve_elbow
 #'
 #' @examples
 #' # generating 2-sample data
