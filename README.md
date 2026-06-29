@@ -7,12 +7,21 @@
 
 <!-- badges: end -->
 
-<!-- badges: start -->
-
-<!-- badges: end -->
-
 HDRankTest provides methods for comparing two-sample high-dimensional
 data based on relative effects.
+
+This package includes the following rank-based testing procedures
+
+- Kong, Ye and Weng (2026)
+- Kong, Villasante Tezanos and Harrar (2022, Symmetry)
+- Kong and Harrar (2020, JNA)
+
+and the following mean-based testing procedures
+
+- Chen and Qin (2010 AOS)
+- Gregory, Carroll, Baladandayuthapani and Lahiri (2015, JASA)
+- Zhang and Wang (2021, CSDA)
+- XU, Lin, Wei and Pan (2016, Biometrika)
 
 ## Installation
 
@@ -21,7 +30,3 @@ You can install the development version of HDRankTest like so:
 ``` r
 remotes::install_github("Kong-WayneState/HDRankTest")
 ```
-
-## License
-
-This package is licensed under MIT license.

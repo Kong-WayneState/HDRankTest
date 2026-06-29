@@ -19,7 +19,7 @@ This package includes the following rank-based testing procedures
 - Kong, Ye and Weng (2026)
 - Kong, Villasante Tezanos, Harrar (2022, Symmetry)
 - Kong and Harrar (2020, JNA)
-ovlRankTest(X1, X2)
+
 
 and the following mean-based testing procedures 
 
@@ -48,7 +48,7 @@ X2 <- rData(p=p, n1, mu1, arma=arma1)
 # Kong, Ye and Weng (2026)
 adpRankTest(X1, X2, W = "CV")
 
-# Kong, Villasante Tezanos, Harrar (2022, Symmetry)
+# Kong, Villasante Tezanos and Harrar (2022, Symmetry)
 cmpRankTest(X1, X2, W = 0) # mpt
 
 

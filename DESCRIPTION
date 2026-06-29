@@ -7,10 +7,7 @@ Maintainer: Xiaoli Kong <kong@wayne.edu>
 Description: High-Dimensional Two-Sample Rank-Based Inference based on relative effects.
 Depends: R (>= 4.4.0)
 Imports: stats, mvtnorm, pathviewr
-Suggests: 
-    knitr,
-    rmarkdown,
-    testthat (>= 3.0.0)
+Suggests: testthat (>= 3.0.0)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
