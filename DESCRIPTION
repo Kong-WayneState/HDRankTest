@@ -20,3 +20,5 @@ Packaged: 2026-06-29 10:00:00 ETC;
 Date/Publication:
 License: MIT + file LICENSE
 Config/testthat/edition: 3
+URL: https://github.com/Kong-WayneState/HDRankTest
+BugReports: https://github.com/Kong-WayneState/HDRankTest/issues
