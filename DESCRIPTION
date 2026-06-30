@@ -2,7 +2,7 @@ Package: HDRankTest
 Type: Package
 Title: High-Dimensional Two-Sample Rank-Based Inference
 Version: 0.1.0
-Author: Xiaoli Kong
+Author: Xiaoli Kong, Zi Ye, Jiaying Weng
 Maintainer: Xiaoli Kong <kong@wayne.edu>
 Description: High-Dimensional Two-Sample Rank-Based Inference based on relative effects.
 Depends: R (>= 4.4.0)
