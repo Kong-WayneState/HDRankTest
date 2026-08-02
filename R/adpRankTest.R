@@ -65,9 +65,8 @@ adpRankTest <- function(X1, X2, omega = 0.5, W = NA, pow = c(1:6, Inf), ...){
     )
     W <- pathviewr::find_curve_elbow(data.frame(index = 1:p, acf = tacf))  - 1
   }else if (W == "CV") {
-    X_scale <- rbind(scale(X1, center = TRUE, scale = FALSE),
-                     scale(X2, center = TRUE, scale = FALSE))
-    W <- find_win(X_scale, ...)
+    Y_scale <- scale(Y2, center = TRUE, scale = FALSE)
+    W <- find_win(Y_scale, ...)
   }
 
   # ------------- Rank-based Sum-of-Power-Type Test -------------
