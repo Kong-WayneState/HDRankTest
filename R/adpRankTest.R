@@ -32,7 +32,7 @@
 #' adpRankTest(X1, X2, W = "CV")
 #'
 #'
-adpRankTest <- function(X1, X2, omega = 0.5, W = NA, pow = c(1:6, Inf), ...){
+adpRankTest <- function(X1, X2, omega = 0.5, W = "CV", pow = c(1:6, Inf), ...){
   p  <- ncol(X1)
   n1 <- nrow(X1)
   n2 <- nrow(X2)
