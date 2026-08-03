@@ -10,6 +10,8 @@
 #'   determine the value. If \code{"CV"}, the value is selected via
 #'   cross-validation using the tuning parameters \code{step} and \code{fold}.
 #' @param pow A vector of powers used to construct the adaptive test.
+#' @param method Specifying the method to find the adaptive p-value.
+#' Options are \code{"simes"} (default) or \code{"tippett"}.
 #' @param ... Arguments passed to the \code{find_win} function.
 #' Default options \code{step = 1}, \code{cv.fold = 10},
 #'   and \code{norm.type = "E"}
@@ -32,7 +34,8 @@
 #' adpRankTest(X1, X2, W = "CV")
 #'
 #'
-adpRankTest <- function(X1, X2, omega = 0.5, W = "CV", pow = c(1:6, Inf), ...){
+adpRankTest <- function(X1, X2, omega = 0.5, W = NA, pow = c(1:6, Inf),
+                        method = "simes",...){
   p  <- ncol(X1)
   n1 <- nrow(X1)
   n2 <- nrow(X2)
@@ -116,17 +119,25 @@ adpRankTest <- function(X1, X2, omega = 0.5, W = "CV", pow = c(1:6, Inf), ...){
                                            sigma = Cov.even))
   }
 
-  pval.min <- min(c(pval.odd, pval.even, pval.inf), na.rm = TRUE)
-  nadp <- 3 - sum(is.na(c(pval.odd, pval.even, pval.inf)))
-  # Adaptive P-value via Tippett’s method
-  pval.adp <- 1 - (1 -  pval.min)^nadp
+  ntest <- 3 - sum(is.na(c(pval.odd, pval.even, pval.inf)))
+  if (method == "tippett") {
+    pval.min <- min(c(pval.odd, pval.even, pval.inf), na.rm = TRUE)
+    # Adaptive P-value via Tippett’s method
+    pval.adp <- 1 - (1 -  pval.min)^ntest
+  } else if (method == "simes") {
+    pval_sorted <- sort(c(pval.odd, pval.even, pval.inf))
+    # Adaptive P-value via Simes' method
+    pval.adp <- min((ntest * pval_sorted) / (1:ntest))
+  } else {
+    stop("Invalid method. Choose either 'Tippett' or 'Simes'.")
+  }
 
   # ------------- Output -------------
   stat = c(R.pow.stat, R.inf.stat)
-  pval = c(pval.pow, pval.inf, pval.adp)
+  pval = c(pval.pow, pval.inf, pval.odd, pval.even, pval.adp)
 
   names(stat) = c(paste("RSPU_", pow, sep = ""))
-  names(pval)= c(paste("RSPU_", pow, sep = ""), "aRSPU")
+  names(pval)= c(paste("RSPU_", pow, sep = ""), "RSPU_odd", "RSPU_even", "aRSPU")
 
   return(list(Statistic = stat, p.value = pval, window = W))
 }
