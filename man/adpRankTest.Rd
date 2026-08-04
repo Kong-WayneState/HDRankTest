@@ -10,7 +10,7 @@ adpRankTest(
   omega = 0.5,
   W = NA,
   pow = c(1:6, Inf),
-  method = "simes",
+  method = "tippett",
   ...
 )
 }
