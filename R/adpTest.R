@@ -12,7 +12,7 @@
 #'   cross-validation using the tuning parameters \code{step} and \code{fold}.
 #' @param pow A vector of powers used to construct the adaptive test.
 #' @param method Specifying the method to find the adaptive p-value.
-#' Options are \code{"tippett"} (default) or \code{"simes"}.
+#' Options are\code{"tippett"} (default) or \code{"simes"}.
 #' @param ... Arguments passed to the \code{find_win} function.
 #' Default options \code{step = 1}, \code{cv.fold = 10},
 #'   and \code{norm.type = "E"}
