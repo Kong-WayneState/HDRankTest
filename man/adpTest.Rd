@@ -4,7 +4,7 @@
 \alias{adpTest}
 \title{Adaptive Test}
 \usage{
-adpTest(X1, X2, W = NA, pow = c(1:6, Inf), method = "simes", ...)
+adpTest(X1, X2, W = NA, pow = c(1:6, Inf), method = "tippett", ...)
 }
 \arguments{
 \item{X1}{A numeric \eqn{(n_1 \times p)} matrix of data from sample 1.}
@@ -18,7 +18,7 @@ cross-validation using the tuning parameters \code{step} and \code{fold}.}
 \item{pow}{A vector of powers used to construct the adaptive test.}
 
 \item{method}{Specifying the method to find the adaptive p-value.
-Options are \code{"simes"} (default) or \code{"tippett"}.}
+Options are \code{"tippett"} (default) or \code{"simes"}.}
 
 \item{...}{Arguments passed to the \code{find_win} function.
 Default options \code{step = 1}, \code{cv.fold = 10},
