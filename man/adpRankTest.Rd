@@ -28,7 +28,7 @@ cross-validation using the tuning parameters \code{step} and \code{fold}.}
 \item{pow}{A vector of powers used to construct the adaptive test.}
 
 \item{method}{Specifying the method to find the adaptive p-value.
-Options are \code{"simes"} (default) or \code{"tippett"}.}
+Options are \code{"tippett"} (default) or \code{"simes"}.}
 
 \item{...}{Arguments passed to the \code{find_win} function.
 Default options \code{step = 1}, \code{cv.fold = 10},
