@@ -12,7 +12,7 @@
 #'   cross-validation using the tuning parameters \code{step} and \code{fold}.
 #' @param pow A vector of powers used to construct the adaptive test.
 #' @param method Specifying the method to find the adaptive p-value.
-#' Options are \code{"simes"} (default) or \code{"tippett"}.
+#' Options are \code{"tippett"} (default) or \code{"simes"}.
 #' @param ... Arguments passed to the \code{find_win} function.
 #' Default options \code{step = 1}, \code{cv.fold = 10},
 #'   and \code{norm.type = "E"}
@@ -36,7 +36,7 @@
 #' adpTest(X1, X2, W = "CV")
 #'
 #'
-adpTest <- function(X1, X2, W = NA, pow = c(1:6, Inf), method = "simes",...){
+adpTest <- function(X1, X2, W = NA, pow = c(1:6, Inf), method = "tippett",...){
   p  <- ncol(X1)
   n1 <- nrow(X1)
   n2 <- nrow(X2)
